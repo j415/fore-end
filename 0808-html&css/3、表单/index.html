@@ -3,6 +3,26 @@
 	<head>
 		<meta charset="utf-8" />
 		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.text{
+				width: 500px;
+				height: 40px;
+				background-color: blue;
+				float: left;
+			}
+			.lab{
+				background-color: green;
+				height: 40px;
+				width: 40px;
+				float: left;
+				text-align: center;
+				padding: 1px;
+			}
+		</style>
 	</head>
 	<body>
 		<form name="register" action="/form" method="post">
@@ -52,6 +72,8 @@
 			<input type="email" name="" id="" value="" />
 			<input type="tel" name="" id="" value="" />
 			<input type="number" name="" id="" value="" />
+			<hr />
+			<input type="text" name="text" id="text" class="text"/><div class="lab">搜索</div>
 		</form>
 	</body>
 </html>

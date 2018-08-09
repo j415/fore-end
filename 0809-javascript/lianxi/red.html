@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>red</title>
+	</head>
+	<body style="height: 1000px; background-color: red;">
+		<button onclick="func()">跳转到黄页面</button>
+		
+		<button onclick="func()">上一页</button>
+		<button onclick="func()">下一页</button>
+		
+		<script type="text/javascript">
+			function func(){
+				window.location.assign("yellow.html")
+			}
+			function func1(){
+				window.history.back()
+			}
+			function func2(){
+				window.history.forward()
+			}
+		</script>
+	</body>
+</html>
