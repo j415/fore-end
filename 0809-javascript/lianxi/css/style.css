@@ -1,0 +1,26 @@
+/*#box{
+	width: 100px;
+	height: 200px;
+	background-color: red;
+	}*/
+	
+/*#box1{
+	width: 200px; height: 200px; background-color: red;
+}
+#box2{
+	width: 200px; height: 200px; background-color: green;
+}
+#box3{
+	width: 200px; height: 200px; background-color: yellow;
+}*/
+
+#box{
+	width: 300; height: 300; background-color: yellow;
+}
+#box1{
+	width: 100px; height: 100px; background-color: red;
+}
+#box2{
+	width: 50px; height: 50px; background-color: blue;
+}
+

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>aspiring</title>
+		<link rel="stylesheet" type="text/css" href="css/style2.css" />
+		<script type="text/javascript" charset="UTF-8" src="js/test.js"></script>
+	</head>
+	<body style="height: 3000px;">
+		<!--<div id="box">
+			<p>1</p>
+			<p>2</p>
+		</div>-->
+		
+		<!--事件：就是用户或者是浏览器执行的某种动作
+		事件处理程序：就是响应事件的函数，事件处理程序的名字是以"on"开头的-->
+		<div id="box1" onclick="alert('aspiring')"></div>
+		
+		<div id="box2" onclick="func(this)"></div>
+		
+		<div id="box3"></div>
+		
+		<div id="box4"></div>
+		
+		<script type="text/javascript">
+			//创建元素节点
+//			var input = document.createElement("input")
+//			input.setAttribute("type", "text")
+//			input.setAttribute("placeholder", "aspiring!!!")
+//			document.getElementById("box").appendChild(input)
+			//事件处理程序
+			function func(self){
+				console.log(self)
+				console.log(this)
+				self.style.backgroundColor = "black"
+				alert("aspiring allow!!!")
+			}
+			var div3 = document.getElementById("box3")
+			div3.onclick = function(){
+				
+				alert("aspiring 111")
+			}
+			
+			//覆盖了上一个事件
+			div3.onclick = function(){
+				console.log(this)
+				alert("aspiring 222")
+			}
+			//清除事件
+//			div3.onclick = null
+//			var div4 = document.getElementById("box4")
+//			div4.addEventListener("click", function(){
+//				alert("cool")
+//			},false)
+//			//事件之间不影响
+//			var div4 = document.getElementById("box4")
+//			div4.addEventListener("click", function(){
+//				alert("cool again")
+//			},false)
+			var div4 = document.getElementById("box4")
+			function f(){
+				console.log(this)
+				alert("cool again")
+			}
+			div4.addEventListener("click", f, false)
+			//清除事件
+//			div4.removeEventListener("click", f, false)
+			
+			
+			
+			
+		</script>
+	</body>
+</html>
+
+	<!--
+		能否使用this，this代表的是誰？？
+		1、在标签中使用，代表的是标签本身
+		2、
+			在函数中直接使用，代表的是window
+			在标签中将this作为市场传递到函数中，在函数体中使用形参代表标签本身
+		3、在时间函数中使用，代表标签本身
+		4、在时间函数中使用，代表标签本身
+	-->
+
+
