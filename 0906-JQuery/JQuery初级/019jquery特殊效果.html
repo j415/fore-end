@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jquery特殊效果</title>
+		<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+		<style type="text/css">
+			.box{
+				width: 200px;
+				height: 200px;
+				background-color: green;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" name="" id="btn1" value="fadeOut" />
+		<input type="button" name="" id="btn2" value="fadeToggle" />
+		<input type="button" name="" id="btn3" value="toggle" />
+		<input type="button" name="" id="btn4" value="slideDown" />
+		<input type="button" name="" id="btn5" value="slideUp" />
+		<input type="button" name="" id="btn6" value="slideToggle" />
+		<div class="box"></div>
+	</body>
+	<script type="text/javascript">
+		
+		// fadeOut() 淡出
+		// fadeToggle() 切换淡入淡出
+		// hide() 隐藏元素
+		// show() 显示元素
+		// toggle() 依次展示或隐藏某个元素
+		// slideDown() 向下展开
+		// slideUp() 向上卷起
+		// slideToggle() 依次展开或卷起某个元素
+		
+		$(function(){
+			$('#btn1').click(function(){
+				$('.box').fadeOut();
+			});
+			$('#btn2').click(function(){
+				$('.box').fadeToggle();
+			});
+			$('#btn3').click(function(){
+				$('.box').toggle();
+			});
+			$('#btn4').click(function(){
+				$('.box').slideDown();
+			});
+			$('#btn5').click(function(){
+				$('.box').slideUp();
+			});
+			$('#btn6').click(function(){
+				$('.box').slideToggle();
+			});
+		})
+	</script>
+</html>

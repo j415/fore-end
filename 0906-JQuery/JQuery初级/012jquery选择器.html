@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jquery选择器</title>
+		<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+		<style type="text/css">
+			#div1{
+				color: red;
+			}
+			.box{
+				color: green;
+			}
+			.list li{
+				margin-bottom: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1">这是一个div元素</div>
+		<div class="box">这时第二个div元素</div>
+		<ul class="list">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+		</ul>
+		<ul>
+			<li>9</li>
+		</ul>
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			var $div1= $('#div1').css({color:'pink'});
+			var $box = $('.box').css({fontSize:'30px'});
+			$('li').css({background:'purple',color:'#fff',fontSize:'20px'});
+			$('.list li').css({background:'blue',color:'#fff',fontSize:'20px'});
+//			alert($box.html());
+		})
+	</script>
+</html>

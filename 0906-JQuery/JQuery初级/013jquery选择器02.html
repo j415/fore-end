@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jquery选择器</title>
+		<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	</head>
+	<body>
+		<p>这是第二个p元素</p>
+		<div>这是第三个div元素</div>
+		<div id="div1">这是一个div元素</div>
+		<p>这是一个p元素</p>
+		<div>这是二个div元素</div>
+		
+		<div>
+			<a href="#">百度网</a>
+			<span id="span01">span01元素</span>
+		</div>
+		
+		<div id="div2">
+				<a href="#" class="link1">腾讯网</a>
+				<div><span id="span02">span02元素</span></div>
+		</p> 
+		</div>
+		
+		<ul class="list">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+		</ul>
+		
+		<ul class="list2">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+		
+		
+	</body>
+	<script type="text/javascript">
+		
+		$(function(){
+			
+			// next() 同级的下一个元素，nextAll同级的下面所有元素
+			// prev() 同级的上一个元素，prevAll同级的上面所有元素
+			
+			$('#div1').next('p').css({color:'red'});
+			$('#div1').prev('p').css({color:'red'});
+//			$('#div1').nextAll('p').css({color:'red'});
+			
+			// parent() 选择上一级的父元素
+			$('#span01').parent().css({width:'100px',height:'100px',background:'green'});
+			
+			// closest() 方法获得匹配选择器的第一个祖先元素，从当前元素开始沿 DOM 树向上。
+			$('#span02').closest('div').css({width:'200px',height:'200px',background:'purple'});
+			// $('.list li')：不能回到父级
+			// $('.list').children()：可以通过end()回到父级
+			$('.list').children().css({height:'30px',background:'gold',marginBottom:'10px'}).end().css({background:'green'});
+			
+			// $().siblings(); 选择同级元素
+			$('.list2 li:eq(2)').css({background:'gold'}).siblings().css({background:'green'});
+			
+			$('#div2').find('.link1').css({color:'red'});
+			
+		})
+		
+	</script>
+</html>

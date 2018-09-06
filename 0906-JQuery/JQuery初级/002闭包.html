@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>闭包</title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		//闭包函数， 存在内存，不会被回收
+//		function aa(n){
+//			var b = 3;
+//			function bb(){
+//				alert(n);
+//				alert(b);
+//			}
+//			return bb()
+//		}
+//		var cc = aa(2);
+		
+		// 闭包简写方式
+		
+		var cc = (function(n){
+			var b = 3;
+			function bb(){
+				alert(n);
+				b++;
+				alert(b);
+			}
+			return bb;
+		})(2);
+		cc();
+		cc();
+	</script>
+</html>

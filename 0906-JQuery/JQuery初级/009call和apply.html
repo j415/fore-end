@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>call和apply</title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		
+		function aa(a,b){
+			alert('我的this是'+ this+',我的a是'+a+'，我的b是'+b);
+		}
+//		aa.call('abc',2,3);
+		
+		aa.apply('abc',[2,3]);
+	</script>
+</html>

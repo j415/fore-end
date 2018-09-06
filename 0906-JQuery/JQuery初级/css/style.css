@@ -1,0 +1,25 @@
+.btns{
+	width: 500px;
+	height: 50px;
+}
+.btns input{
+	width: 100px;
+	height: 50px;
+	background-color: #ddd;
+	color: #666;
+	border: 0;
+}
+.btns input.cur{
+	background-color: gold;
+}
+.contents div{
+	width: 500px;
+	height: 200px;
+	background-color: gold;
+	display: none;
+	line-height: 200px;
+	text-align: center;
+}
+.contents div.active{
+	display: block;
+}
