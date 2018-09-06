@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>获取地址栏参数</title>
+	</head>
+	<body>
+		<div>
+			欢迎<span id="span01"></span>访问我的主页！
+		</div>
+	</body>
+	<script type="text/javascript">
+		window.onload = function(){
+			// window.location.href  //获取或者重定url地址
+			// window.location.search //获取地址参数部分
+			// window.location.hash //获取页面锚点或者叫哈希值
+			var dat = window.location.search;
+			var hash = window.location.hash;
+			
+			var osapn = document.getElementById('span01')
+			
+			var arr = dat.split('=');
+//			alert(arr);
+			var name = arr[1];
+			
+			osapn.innerHTML = name;
+			
+			alert(hash);
+		}
+		
+	</script>
+</html>

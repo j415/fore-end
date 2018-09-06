@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>封闭函数</title>
+		<script type="text/javascript">
+			// 封闭函数，不会影响到其他函数
+			// 定义：(function)(){ ... })();
+			(function (){
+				var str = "欢迎访问我的主页！"
+				alert(str);
+			})();
+			
+			
+			var a = 5;
+			(function (){
+				var sr = "aspiring"
+				console.log(a)
+				console.log(sr)
+			})();
+			
+			//封闭函数其他写法：在匿名函数前加“!”h或者“~”，之后加“()”。
+			!function (){
+				var str = "welcome!"
+				alert(str);
+			}();
+			~function (){
+				var str = "bye!"
+				alert(str);
+			}();
+			
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
