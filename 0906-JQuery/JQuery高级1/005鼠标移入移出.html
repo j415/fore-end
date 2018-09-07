@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>鼠标移入移出</title>
+		<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+		<style type="text/css">
+			.box{
+				width: 200px;
+				height: 200px;
+				background-color: gold;	
+				margin: 100px auto 0;
+			}
+			.son{
+				width: 100px;
+				height:100px;
+				background-color: green;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1" class="box">
+			<div class="son">
+				
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			// mouseover() 鼠标进入（进入子元素也触发）
+			// mouseout() 鼠标离开（离开子元素也触发）
+			// mouseenter() 鼠标进入（进入子元素不触发）
+			// mouseleave() 鼠标离开（离开子元素不触发）
+			/*
+			  进入子元素会触发
+			$('#div1').mousemove(function(){
+				$(this).stop()..animate({marginTop:50});
+			});
+			$('#div1').mouseout(function(){
+				$(this).stop()..animate({marginTop:100});
+			});
+			 */
+			/*
+			 进入子元素时不会触发
+			$('#div1').mouseenter(function(){
+				$(this).stop().animate({marginTop:50});
+			});
+			$('#div1').mouseleave(function(){
+				$(this).stop().animate({marginTop:100});
+			});
+			*/
+			$('#div1').hover(function(){
+				$(this).stop().animate({marginTop:50});
+			},function(){
+				$(this).stop().animate({marginTop:100});
+			})
+		});
+	</script>
+</html>

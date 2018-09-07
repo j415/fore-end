@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jquery其他事件</title>
+		<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+		
+	</head>
+	<body>
+		<div id="div1"></div>
+	</body>
+	<script type="text/javascript">
+		/* 原生写法
+		 window.onload = function(){
+			
+		}
+		*/
+		/*  等同于上面的写法
+		$(window).load(function(){
+			
+		})
+		*/
+		/*  ready()写法
+		$(document).ready(function(){
+			
+		})
+		*/
+		/* ready() 的简写
+		$(function(){
+			
+		})
+		*/
+		
+		// 窗口改变尺寸的时候
+		$(window).resize(function(){
+			console.log('2')
+		});
+		
+		
+	</script>
+</html>

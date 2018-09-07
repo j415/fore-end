@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>事件委托</title>
+		<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+		<style type="text/css">
+			.list{
+				list-style: none;
+			}
+			.list li{
+				height: 30px;
+				background-color: blue;
+				margin-bottom: 10px;
+				color: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="list">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+		</ul>
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			/*
+			$('.list li').click(function(){
+				alert($(this).html())
+			})
+			*/
+			$('.list').delegate('li','click',function(){
+				alert($(this).html());
+				// 取消委托
+//				$('.list').undelegate();
+			})
+		})
+	</script>
+</html>

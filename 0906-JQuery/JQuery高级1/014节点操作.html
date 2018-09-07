@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>节点操作</title>
+		<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	</head>
+	<body>
+		<div id="div1"></div>
+	</body>
+	<script type="text/javascript">
+		$(function(){
+//			$('#div1').html('divyuansu');
+			
+			// append()和appendTo()：在现存元素的内部，从后面插入元素
+			// prepend()和prependTo()：在现存元素的内部，从前面插入元素
+			var $span = $('<span>span元素</span>');
+			var $p = $('<p>p元素</p>');
+			
+			// append() 写法
+//			$('#div1').append($span);
+//			$('#div1').append($p);
+			
+			// appendTo() 写法
+			$span.appendTo($('#div1'));
+			$p.appendTo($('#div1'));
+			
+			
+			// before()和insertBefore()：在现存元素的外部，从前面插入元素
+			// after()和insertAfter()：在现存元素的外部，从后面插入元素
+			var $h = $('<h1>页面标题</h1>');
+			
+			// before() 写法
+//			$('#div1').before($h);
+			
+			//insertBefore() 写法
+			$h.insertBefore($('#div1'));
+			
+			$('p').remove(); 
+		})
+		
+	</script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jquery绑定事件</title>
+		<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	</head>
+	<body>
+		<input type="button" name="btn" id="btn" value="非按钮" />
+		<input type="button" name="btn2" id="btn2" value="非按钮2" />
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			
+			$('#btn').bind('hello',function(){
+				alert('hello!');
+			});
+			$('#btn').bind('click',function(){
+				alert('click!');
+			});
+			$('#btn2').click(function(){
+				$('#btn').trigger('hello');
+				$('#btn').trigger('click');
+			});
+		})
+		
+	</script>
+</html>
