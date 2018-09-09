@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jquery公开接口</title>
+		<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	</head>
+	<body>
+		<input type="text" id="txt01" placeholder="jiade" />
+		<ul class="list"></ul>
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			
+			$('#txt01').keyup(function(){
+				
+				var val = $(this).val();
+				
+				$.ajax({
+					type:"get",
+					url:"https://sug.so.360.cn/suggest",
+					dataType:'jsonp',
+					data:{word:val}
+				})
+				.done(function(data){
+					$('.list').empty();
+					for(var i=0;i<data.s.length;i++){
+						var $li = $('<li>'+data.s[i]+'</li>');
+						
+						$li.prependTo('.list');
+					}
+				})
+				.fail(function(){
+					console.log('error');
+				})
+				
+			})
+			
+		})
+		
+//		https://sug.so.360.cn/suggest?callback=suggest_so&encodein=utf-8&encodeout=utf-8&format=json&fields=word,obdata&word=abE7%259A%2584%25E4%25BD%25BF%25E7%2594%25A8%22%5D%7D&_=1481358084554
+		
+		
+	</script>
+</html>

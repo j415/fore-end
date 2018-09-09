@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>正则表达式</title>
+		<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		
+		// 定义一个正则的规则：
+		
+		// 第一种定义方法：
+		var re = new RegExp('a','ig');
+		
+		// 第二种定义方法：
+		var re2 = /ad/ig;
+		
+		var str2 = 'abc';
+		
+//		alert(re2.test(str2));  弹出false
+		
+		// ^匹配开头  $匹配结尾
+		var re3 = /^\d+$/;
+		var str3 = '123aaa';
+//		alert(re3.test(str3)); false
+		
+		var re4 = /^\w+$/;
+		var str4 = 'a@sd';
+//		alert(re4.test(str4));  false
+		
+		var str5 = '1263dafafakldfjk34kljh34jhj76gf09bc67';
+		// 无g
+		var re5 = /\d+/;
+		var arr5 = str5.match(re5);
+//		alert(arr);  // 弹出 1263
+		// 有 g
+		var re51 = /\d+/g;
+		var arr51 = str5.match(re51);
+//		alert(arr51); // 弹出  1263,34,34,76,09,67
+		
+		var re6 = /d/;
+//		alert(str5.search(re6));
+		
+		var str6 = str5.replace(re51,'*');
+		
+		alert(str6);
+		
+	</script>
+</html>
