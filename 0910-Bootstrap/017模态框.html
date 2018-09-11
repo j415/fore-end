@@ -10,6 +10,9 @@
 	<body>
 		<div class="container">
 			<h1>模态框</h1>
+			
+			<button class="btn btn-success" id="btn1">js控制弹出</button>
+			
 			<button class="btn btn-primary" data-toggle="modal" data-target = "#modal01">大模态框</button>
 			<button class="btn btn-primary" data-toggle="modal" data-target = "#modal02">一般模态框</button>
 			<button class="btn btn-primary" data-toggle="modal" data-target = "#modal03">小模态框</button>
@@ -19,10 +22,14 @@
 			<div class="modal-dialog modal-lg">
 				<div class="modal-content">
 					<div class="modal-header">
+						<button type="button" class="close" data-dismiss='modal'><span aria-hidden="true">&times;</span></button>
 						弹框的标题
 					</div>
 					<div class="modal-body">
 						弹框主体
+						<br />
+						<br />
+						模态模态
 					</div>
 					<div class="modal-footer">
 						<button class="btn btn-primary">确定</button>
@@ -64,4 +71,11 @@
 			</div>
 		</div>
 	</body>
+	<script type="text/javascript">
+		$(function(){
+			$('#btn1').click(function(){
+				$('#modal01').modal('show');
+			})
+		});
+	</script>
 </html>
